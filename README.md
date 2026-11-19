@@ -34,7 +34,11 @@ pm2 save
 
 - Browser: `http://<host-ip>:<port>/`
 - VLC (mobile): Network stream → `http://<host-ip>:<port>/xv_results/<file>.mp4`
-- Over tailscale: `https://redsv.tailb6b666.ts.net/xv` (tailscale serve `--set-path=/xv http://127.0.0.1:8810`)
+- Final URLs (nginx-fronted):
+  - Files (redsv 4TB): https://redsv.tailb6b666.ts.net/file
+  - Queue status: https://redsv.tailb6b666.ts.net/xv (proxied to redrevival:8899)
+  - G: working copy: http://100.77.237.11:8850/
+- SMB (Windows Explorer): \\redsv.tailb6b666.ts.net\18 + backup/books/camera_backup/multimedia2 (user: media / fender)
 
 ## Changing served paths
 
